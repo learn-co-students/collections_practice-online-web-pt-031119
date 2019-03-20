@@ -59,13 +59,19 @@ def sort_array_char_count(array)
   end
   
   def sum_array(array)
-     array.inject(0){|sum,x| sum + x }
-    
+    array.inject(0) {|sum,x| sum + x }
    end
+   
    def add_s(array)
-     array.each do |word|
-       if word != feet 
-         
-     end
-     
+    array.each_with_index.collect do   |element, index| 
+       if index != 1
+        "#{element}s"
+      else 
+         element
+      end
+    end
    end
+    
+        
+      
+  
