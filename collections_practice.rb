@@ -49,6 +49,23 @@ def sort_array_char_count(array)
        elements[2] = '$'
       new_array 
     end
-  end   
+  end 
+
+  
+  def find_a(array)
+    array.select do |word|
+      word.start_with?("a")
+    end
+  end
+  
+  def sum_array(array)
+     array.inject(0){|sum,x| sum + x }
     
-   
+   end
+   def add_s(array)
+     array.each do |word|
+       if word != feet 
+         
+     end
+     
+   end
