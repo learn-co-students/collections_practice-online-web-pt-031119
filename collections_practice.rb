@@ -35,11 +35,20 @@ def sum_array(array)
   array.inject {|sum, n| sum + n }
 end
 
+# def add_s(array)
+#   plural = []
+#   array.each do |word|
+#     plural << word + "s"
+#   end
+#   plural[1] = array[1]
+#   plural
+# end
+
+
 def add_s(array)
-  plural = []
-  array.each do |word|
-    plural << word + "s"
+  array.each_with_index.collect do |word, index|
+    if index != 1
+      word + "s"
+    end
   end
-  plural[1] = array[1]
-  plural
 end
